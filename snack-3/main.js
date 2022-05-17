@@ -55,13 +55,10 @@ const cars = [
 // Dividi le automobili in 3 array separati: nel primo array solo le auto a benzina, nel secondo solo le auto a diesel, nel terzo il resto delle auto.
 
 
-const benz = cars.filter((elm) => {
-    return elm.alimentazione === "benzina"    
-});
-console.log(benz);
-const diesel = cars.filter((elm) => {
-    return elm.alimentazione === "diesel"    
-});
+const benz = cars.filter(elm => elm.alimentazione === "benzina");
+
+const diesel = cars.filter(elm => elm.alimentazione === "diesel");
+
 const others = cars.filter((elm) => {
     if(elm.alimentazione !== "benzina" && elm.alimentazione !== "diesel") {
         return cars;
